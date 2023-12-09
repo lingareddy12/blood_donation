@@ -1,0 +1,133 @@
+ *{
+    margin :0;
+    border:0;
+} 
+
+body{
+    background-color: pink; 
+    background:url('bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.top{
+
+    justify-content: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+
+ .container{
+    display: flex;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color:tomato; */
+    width: 400px;
+    color: white;
+    justify-content: center; 
+    height: 450px; 
+    border-radius: 20px;
+    padding: 20px;
+    border: 3px solid black;
+    margin-top: 100px;
+    align-self:center;
+
+} 
+
+h2{
+    font-size: 36px; 
+    margin-bottom: 30px; 
+    text-align: center; 
+    color: black;
+} 
+
+
+.input-group input
+{    
+    
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid white; 
+    margin-bottom: 20px;
+    font-size: 20px; 
+}  
+
+.input-group input:hover
+{    
+    border: 2px solid green; 
+
+}   
+
+.input-group input::placeholder
+{
+    font-size: 16px; 
+}  
+
+ #id_email{
+    font-family:  sans-serif; 
+    font-size: 22px; 
+    color:aliceblue;
+ 
+} 
+
+#id_username {
+    font-family: sans-serif;
+    font-size: 22px;
+    color:aliceblue;
+ 
+} 
+
+#id_password {
+    font-family: sans-serif;
+    font-size: 22px;
+    color:aliceblue;
+ 
+}  
+
+
+#submit
+{
+    background:white;
+    border-radius: 10px;
+    height: 30px;
+    width:103%; 
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 20px;;
+}
+#submit:hover
+{
+    background:lightgreen;
+} 
+
+label
+{
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font: weight 700px; 
+} 
+
+i
+{
+    position: absolute;
+    right: 45px;
+    transform: translateY(200%);
+    color:black
+}
+
+.login{
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+} 
+
+
+
+ 

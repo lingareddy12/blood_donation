@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "register/navbar.css" %}">
+    <link rel="stylesheet" href="{% static "register/acceptor2.css" %}">
+    <title>Blood Acceptors - Page 2</title> 
+
+</head>
+
+<body>
+    <div class="container">
+    <div class="navb">
+        {% include "register/navbar.html" with is_logged_in=is_logged_in %} 
+    </div>
+    <div class="form-container">
+        <form  method="POST" id="my-form">
+            <h2> Details </h2>
+           {% csrf_token%}
+            <input type="text" id="hospital" name="hospital" placeholder="Enter hospital's name" required> 
+           
+            <input type="text" id="address" name="address" placeholder="Enter hospital's address" required>
+           
+            <input type="text" id="emergency" name="emergency" placeholder="Describe the emergency" required>
+            
+            <select name="blood_type">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <select name="component">
+                <option value="RBC">RBC</option>
+                <option value="WBC">WBC</option>
+                <option value="Platelets">Platelets</option>
+                <option value="Plasma">Plasma</option>
+                <option value="Plasma Proteins">Plasma Proteins</option>
+            </select>
+
+            <input type="number" id="units" name="units" min="1" placeholder="No. of units required" required><br>
+             
+            <div class="date"> 
+            <label for="date">Required on</label>
+            <input type="date" id="date" name="date" placeholder="Select event date" required><br>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I agree to share my details for searching donors</label>
+            </div><br> 
+
+            <button type="submit">submit</button>        
+        </form>
+        <h3>After submitting , please wait until we send mails to donors </h3>
+    </div>
+    
+</div> 
+
+</body>
+
+
+</html>

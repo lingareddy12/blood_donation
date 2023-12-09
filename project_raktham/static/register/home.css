@@ -1,0 +1,75 @@
+body {
+   font-family: 'Arial', sans-serif;
+    background-color: #f8d7da;
+    /* background-image: url('home.jpg'); */
+    margin: 0;
+    padding: 0; 
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 103vh; 
+    /* width: 100vw; */
+
+}
+
+
+
+.navbar {
+    background-color: rgba(225,225,225, 0.7); /* Adjust the alpha value (0.7) for transparency */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    display:flex;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: black; /* White text color for the navbar */
+}
+
+.navbar-nav a {
+    color: black; /* White text color for navbar links */
+}
+
+.navbar-nav .dropdown-menu a {
+    color: #000000; /* Black text color for dropdown menu items */
+} 
+
+img{ 
+    position: relative;
+    max-width: 100%;
+    height:100%;
+}
+
+.overlay-buttons{
+    position: absolute; 
+    transform: translateY(-100%); 
+    top: 50%;
+    right:50%
+}
+.overlay-buttons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    color: #ffffff !important; /* White text color for overlay buttons */
+}
+
+.overlay-buttons a .logo {
+    max-width: 50px; /* Adjust the max-width as needed */
+    margin-bottom: 10px; 
+    padding: 10px;
+}
+
+.seek,
+.donate {
+    background-color: #e74c3c; /* Red color for buttons */
+    border-color: #e74c3c; /* Border color for buttons */
+}
+
+.seek:hover,
+.donate:hover {
+    background-color:seagreen; /* Darker red color for hover effect on buttons */
+    border-color:seagreen; /* Border color for hover effect on buttons */
+}

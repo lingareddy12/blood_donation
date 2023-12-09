@@ -1,0 +1,31 @@
+{% load static%}
+
+
+<div class="nav">
+    <a href="{% url 'home' %}">
+        <img src="{% static "register/logo.png" %} "alt="Logo">
+    </a> 
+
+    
+        <ul> 
+        <li class="dropdown">
+            <a href="#" class="dropbtn">More</a>
+            <div class="dropdown-content">
+                <a href="#item1">Availability</a>
+                <a href="#item2">Hospitals</a>
+                <a href="#item3">Contact Us</a>
+            </div>
+        </li>  
+    
+        {% if is_logged_in %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{% url 'seek1' %}">Seek</a></li> 
+            <li><a href="{% url 'donate' %}">Donate</a></li> 
+            <li><a href="{% url 'seek1' %}">Update</a></li> 
+        {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Sign Up</a></li>
+       
+        {% endif %}
+    </ul>
+</div> 

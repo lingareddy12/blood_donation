@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "register/navbar.css" %}">
+    <link rel="stylesheet" href="{% static "register/donor.css" %}">
+    <title>Donor page</title>
+</head>
+
+<body>
+    <div class="container">
+    <div class="navb">
+        {% include "register/navbar.html" with is_logged_in=is_logged_in %} 
+    </div>
+    <div class="form-container">
+      <h2> Details </h2>
+        <form  method="POST">
+           {% csrf_token%}
+           <input type="text" id="name" name="name" placeholder="Enter name" required>
+           
+           <input type="number" id="age" name="age" placeholder="Enter age" required>
+         
+           <select id="id_sex" name="sex" required>
+               <option value="male">Male</option>
+               <option value="female">Female</option>
+               <option value="other">Other</option>
+           </select> 
+
+           <input type="text" id="address" name="address" placeholder="Enter Address" required>
+
+           <input type="email" id="email" name="email" placeholder="Enter Email address" required> 
+           
+           <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile Number" required> 
+          
+           <select name="blood_type">
+            <option value="A+">Blood Group - A+</option>
+            <option value="A-">Blood Group - A-</option>
+            <option value="B+">Blood Group - B+</option>
+            <option value="B-">Blood Group - B-</option>
+            <option value="O+">Blood Group - O+</option>
+            <option value="O-">Blood Group - O-</option>
+            <option value="AB+">Blood Group - AB+</option>
+            <option value="AB-">Blood Group - AB-</option>
+           </select> 
+         
+        <div class="date"> 
+          <label for="date">Last donated</label>
+          <input type="date" id="date" name="date" placeholder="Select event date" required><br>
+          </div> 
+
+
+          <select name="health_status">
+            <option value="healthy">Healthy</option>
+            <option value="fever">Fever</option>
+            <option value="cancer">Cancer</option>
+            <option value="blood_disorders">Blood Disorders</option>
+            <option value="pregnant">Pregnant</option>
+            <option value="Infectious_diseases">Infectious Diseases</option>
+           </select> 
+
+            <div class="checkbox">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I agree to share emails to my provided mail</label>
+            </div><br> 
+
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

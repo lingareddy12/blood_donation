@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>register</title>
+         
+         
+         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+         
+         <link rel="stylesheet" href="{% static 'register/base.css' %}">
+         <link rel="stylesheet" href="{% static "register/navbar.css" %}">
+         
+    </head>
+
+    <body> 
+        <div class="top"> 
+            <div class="navb" style="width:100%">
+        {% include "register/navbar.html"%} 
+            </div>
+    
+    <div class="container">
+        <form method="POST"  autocomplete="off">
+            {% csrf_token %}
+            <h2>Register</h2>
+            <div class="input-group">
+                <label for="{{ form.username.id_for_label }}">Username</label>
+                <i class='bx bxs-user'></i>
+                {{ form.username }}
+            </div>  
+
+            <div class="input-group">
+                <label for="{{ form.email.id_for_label }}">Email</label>
+                <i class='bx bxs-envelope'></i>
+                {{ form.email }}
+            </div>
+
+            <div class="input-group">
+                <label for="{{ form.password.id_for_label }}">Password</label>
+                <i class='bx bxs-lock'></i>
+                {{ form.password }}
+            </div>
+
+            <button id="submit" type="submit">Register</button>
+            
+            				<div class="login">
+                     <h5>Already have an account?<a href="{% url 'login' %}">Login</a></h5>
+				</div>
+        </form>
+    </div>
+
+</div>
+</body>
+
+</html>

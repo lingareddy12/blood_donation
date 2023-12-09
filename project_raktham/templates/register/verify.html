@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "register/navbar.css" %}">
+    <link rel="stylesheet" href="{% static 'register/verify.css' %}">
+    <title>Blood Donation - OTP Verification</title>
+</head>
+<body>  
+    <div class="container">
+    <div class="navb">
+        {% include "register/navbar.html" %}
+    </div>
+    <div class="verify_form">
+        <div>
+             <h2>Email Verification</h2>
+        </div> 
+        <div>
+        <form  method="POST">
+            {% csrf_token %}
+            <p class="text">Verification Code has been sent to your Email. Please enter the code to verify:</p>
+            <label for="otp">OTP</label>
+            <input type="text" id="otp" name="otp" required>
+            <button class="button" type="submit">Verify OTP</button>
+        </form> 
+    </div>
+    </div>
+</div>
+</body>
+</html>

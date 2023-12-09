@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> {% endcomment %}
+    <link rel="stylesheet" href="{% static "register/navbar.css" %}">
+    <link rel="stylesheet" href="{% static 'register/login.css' %}">
+</head>
+<body>
+    <div class="container"> 
+        <div class="navb">
+            {% include "register/navbar.html" %} 
+        </div>
+        <div class="login_form">
+            <form method="POST">
+            {% csrf_token %}
+                <h2>Login</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <i class='bx bxs-envelope'></i>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <i class='bx bxs-lock'></i>
+
+                <button class="button" type="submit">Submit</button>
+                <div class="signup">
+                    <h5>Don't have an account?<a href="{% url 'register' %}">SignUp</a></h5>
+               </div>
+            </form>  
+        </div>
+    </div>
+</body>
+</html>

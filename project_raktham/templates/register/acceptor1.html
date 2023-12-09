@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "register/navbar.css" %}">
+    <link rel="stylesheet" href="{% static "register/acceptor1.css"%}">
+    <title>Blood Acceptors - Page 1</title>
+</head>
+<body> 
+    <div class="container">
+    <div class="navb">
+        {% include "register/navbar.html" with is_logged_in=is_logged_in %} 
+    </div>
+    <div class="form-container">
+        <h2>Blood Request Form</h2><br>
+        <form method="POST"> 
+            {% csrf_token %}
+            <input type="text" id="name" name="name" placeholder="Enter patient's name" required>
+           
+            <input type="number" id="age" name="age" placeholder="Enter patient's age" required>
+          
+            <select id="id_sex" name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <input type="email" id="email" name="email" placeholder="Enter Email address" required> 
+            
+            <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile Number" required> 
+
+            <button class="button" type="submit">Next</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

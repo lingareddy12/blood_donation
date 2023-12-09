@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tnx mowa</title>
+
+</head>
+<body>
+<h2>Your details are stored , click request and wait unitl we send mails to the donors</h2>
+<form id ="myForm" method="POST">
+    {% csrf_token%}
+<button type="submit">request</button> 
+</form>
+</body>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(event){
+        this.style.display = "none";
+        this.disabled = true;
+    });
+</script>
+
+</html>

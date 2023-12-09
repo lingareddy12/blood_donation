@@ -1,0 +1,77 @@
+*{
+    margin :0;
+    border:0;
+} 
+
+body{
+    background-color: pink; 
+    background:url('bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.container .navb{
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}  
+
+h2{
+    margin-left: 150px;
+    padding: 10px;
+}
+
+.form-container {
+    width: 400px;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding:30px;
+    background: transparent;
+    margin-top: 80px;
+}
+
+#hospital,
+#address,
+#emergency,
+#units,
+select,
+#date,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+button {
+    background-color:red;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
