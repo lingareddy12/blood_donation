@@ -1,1 +1,1 @@
-# blood_donation
+blood donation django application
